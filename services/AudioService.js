@@ -32,10 +32,8 @@ async function init() {
 }
 
 async function playOutcome(outcome) {
-  // Asegurar inicialización
   if (!initialized) await init();
 
-  // Mapear asset por resultado
   const asset = outcome === 'WIN'
     ? require('../assets/sounds/win.mp3')
     : outcome === 'DRAW'
