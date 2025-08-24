@@ -1,8 +1,8 @@
-# Piedra, Papel o Tijeras (Expo + MVC)
+# Piedra, Papel o Tijeras — Erick Ismael Valenzuela Peralta
+# A01562867
 
-Basado en tu Convertidor de Temperatura. Misma estructura y dependencias.
-
-## Ejecutar
-1. Instala dependencias:
-   ```bash
-   npm install
+## Ejecución
+```bash
+npm install
+npx expo install expo-av #Es que le agregué sonidos a la app.
+npx expo start
