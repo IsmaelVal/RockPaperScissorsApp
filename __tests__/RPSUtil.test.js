@@ -1,10 +1,8 @@
-// __tests__/RPSUtil.test.js
 import RPSUtil from '../utils/RPSUtil';
 
 describe('RPSUtil unit tests', () => {
   const { MOVES, OUTCOMES, decideWinner, getRandomMove } = RPSUtil();
 
-  // Requisitos del profe: máximo, mínimo, normal
   test('Máximo (WIN): PAPER vence a ROCK', () => {
     expect(decideWinner(MOVES.PAPER, MOVES.ROCK)).toBe(OUTCOMES.WIN);
   });
@@ -17,7 +15,6 @@ describe('RPSUtil unit tests', () => {
     expect(decideWinner(MOVES.SCISSORS, MOVES.SCISSORS)).toBe(OUTCOMES.DRAW);
   });
 
-  // Matriz completa (ganar / perder / empatar)
   test('ROCK vence a SCISSORS', () => {
     expect(decideWinner(MOVES.ROCK, MOVES.SCISSORS)).toBe(OUTCOMES.WIN);
   });
@@ -48,7 +45,6 @@ describe('RPSUtil unit tests', () => {
     expect(decideWinner(MOVES.SCISSORS, MOVES.SCISSORS)).toBe(OUTCOMES.DRAW);
   });
 
-  // Aleatorio: siempre válido
   test('getRandomMove devuelve sólo ROCK | PAPER | SCISSORS', () => {
     const allowed = new Set([MOVES.ROCK, MOVES.PAPER, MOVES.SCISSORS]);
     for (let i = 0; i < 200; i++) {
