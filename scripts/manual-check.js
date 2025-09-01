@@ -1,5 +1,3 @@
-// Ejecuta: node scripts/manual-check.js
-
 require('@babel/register')({ presets: ['babel-preset-expo'] });
 const RPSUtil = require('../utils/RPSUtil').default;
 
