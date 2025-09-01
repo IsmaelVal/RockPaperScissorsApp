@@ -9,4 +9,10 @@ npx expo start
 
 #Solo si aparece una incompatibilidad de versiones, utilice este
 npx expo install expo@53.0.22 expo-router@~5.1.5
+```
+
+## Test
+```bash
+npm test #Pruebas unitarias automaticas
+node scripts/manual-check.js #Prueba manual
 
