@@ -7,11 +7,11 @@ describe('RPSUtil unit tests', () => {
     expect(decideWinner(MOVES.PAPER, MOVES.ROCK)).toBe(OUTCOMES.WIN);
   });
 
-  test('Mínimo (Pierde): Piedra pierde vs Papel', () => {
+  test('Mínimo (Pierde): Piedra pierde contra Papel', () => {
     expect(decideWinner(MOVES.ROCK, MOVES.PAPER)).toBe(OUTCOMES.LOSE);
   });
 
-  test('Normal (Empate): Tijeras vs Tijeras', () => {
+  test('Normal (Empate): Tijeras vs Tijeras empatan', () => {
     expect(decideWinner(MOVES.SCISSORS, MOVES.SCISSORS)).toBe(OUTCOMES.DRAW);
   });
 });
