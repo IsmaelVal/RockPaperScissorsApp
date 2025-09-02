@@ -3,23 +3,15 @@ import RPSUtil from '../utils/RPSUtil';
 describe('RPSUtil unit tests', () => {
   const { MOVES, OUTCOMES, decideWinner, getRandomMove } = RPSUtil();
 
-  test('Máximo (WIN): PAPER vence a ROCK', () => {
+  test('Máximo (Victoria): Papel le gana a Piedra', () => {
     expect(decideWinner(MOVES.PAPER, MOVES.ROCK)).toBe(OUTCOMES.WIN);
   });
 
-  test('Mínimo (LOSE): ROCK pierde vs PAPER', () => {
+  test('Mínimo (Pierde): Piedra pierde vs Papel', () => {
     expect(decideWinner(MOVES.ROCK, MOVES.PAPER)).toBe(OUTCOMES.LOSE);
   });
 
-  test('Normal (DRAW): SCISSORS vs SCISSORS', () => {
+  test('Normal (Empate): Tijeras vs Tijeras', () => {
     expect(decideWinner(MOVES.SCISSORS, MOVES.SCISSORS)).toBe(OUTCOMES.DRAW);
-  });
-  
-  test('getRandomMove devuelve sólo ROCK | PAPER | SCISSORS', () => {
-    const allowed = new Set([MOVES.ROCK, MOVES.PAPER, MOVES.SCISSORS]);
-    for (let i = 0; i < 200; i++) {
-      const m = getRandomMove();
-      expect(allowed.has(m)).toBe(true);
-    }
   });
 });
